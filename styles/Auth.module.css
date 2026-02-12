@@ -1,0 +1,205 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.backgroundGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #6dec82 0%, #089524 50%, #0a9c14 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 48px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.logoContainer {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    border-radius: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #01b147 0%, #73e69f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #f87171;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    animation: slideIn 0.3s ease-out;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.inputGroup input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.inputGroup input:focus {
+    outline: none;
+    background: rgba(39, 233, 136, 0.08);
+    border-color: #37eb70;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.inputGroup input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.inputGroup input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.submitButton {
+    background: linear-gradient(135deg, #2bff64 0%, #16f075 100%);
+    color: white;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submitButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(56, 248, 158, 0.4);
+}
+
+.submitButton:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.buttonSpinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+.footer {
+    margin-top: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.linkButton {
+    background: none;
+    color: #04c029;
+    font-weight: 600;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.linkButton:hover:not(:disabled) {
+    color: #3da708;
+}
+
+.loadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #0a0a0a;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #50ff76;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@media (max-width: 640px) {
+    .card {
+        padding: 32px 24px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+}

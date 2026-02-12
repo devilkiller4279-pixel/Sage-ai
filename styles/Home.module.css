@@ -1,0 +1,197 @@
+.container {
+    min-height: 100vh;
+    background: #0a0a0a;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.logoArea {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brandName {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navButtons {
+    display: flex;
+    gap: 16px;
+}
+
+.loginBtn {
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.loginBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.signupBtn {
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: white;
+    color: black;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.signupBtn:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
+}
+
+.heroSection {
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge {
+    padding: 6px 16px;
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 100px;
+    font-size: 14px;
+    color: #667eea;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    max-width: 900px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #888;
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.ctaButtons {
+    display: flex;
+    gap: 20px;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 120px;
+    padding-bottom: 100px;
+}
+
+.featureCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 32px;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.iconWrapper {
+    width: 48px;
+    height: 48px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.featureDesc {
+    color: #888;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+    .featuresGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 48px;
+    }
+
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .navButtons {
+        display: none;
+    }
+}

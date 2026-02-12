@@ -1,0 +1,14 @@
+Use the commands below to add the environment variables to your Vercel project.
+(Only for vercel!)
+
+vercel env add GROQ_API_KEY production
+
+vercel env add SUPABASE_DBURL production
+
+vercel env add SESSION_SECRET production
+
+vercel env add NEXT_PUBLIC_CHATBOT_NAME production
+
+vercel env add NEXT_PUBLIC_CHATBOT_LOGO_URL production
+
+vercel env add OPENROUTER_API production
