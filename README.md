@@ -1,7 +1,3 @@
-Here is your **updated professional README** with the project name changed from **CodeX GPT** → **Sage AI** (including branding polish and consistency throughout) 👇
-
----
-
 # 🚀 Sage AI
 
 ### Professional AI Chatbot Platform
